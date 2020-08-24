@@ -30,4 +30,50 @@ public class Student {
     private int studentIssuedBooksNumber;
     private String[] studentIssuedBooksNames;
 
+    // we can create special type of methods to access these fields outside the class.
+    // 1. Getter Methods:
+    // Observer methods / Accessor methods
+    //we can use the getter methods to access the value of a filed i.e read it.
+
+    // 2. Setter Methods:
+    // Transformer methods / Mutator methods
+    // we can use setter methods to set the value of the field i.e write it.
+
+    /*
+     * public <am:sameAsTheField> void set <NameOfTheField>(<SameAsTheField>) {}
+     *
+     */
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public long getStudentUniversityRollNumber() {
+        return studentUniversityRollNumber;
+    }
+
+    public void setStudentUniversityRollNumber(long studentUniversityRollNumber) {
+        this.studentUniversityRollNumber = studentUniversityRollNumber;
+    }
+
+    public int getStudentIssuedBooksNumber() {
+        return studentIssuedBooksNumber;
+    }
+
+    public void setStudentIssuedBooksNumber(int studentIssuedBooksNumber) {
+        this.studentIssuedBooksNumber = studentIssuedBooksNumber;
+    }
+
+    public String[] getStudentIssuedBooksNames() {
+        return studentIssuedBooksNames;
+    }
+    //
+    public void setStudentIssuedBooksNames(String[] studentIssuedBooksNames) {
+        this.studentIssuedBooksNames = studentIssuedBooksNames;
+    }
+
 }
