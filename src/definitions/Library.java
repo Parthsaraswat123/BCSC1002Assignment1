@@ -21,6 +21,14 @@ public class Library {
 
     private boolean[] Books;
 
+    public Library() {
+
+    }
+
+    public Library(boolean Books) {
+        this.Books = new boolean[]{Books};
+    }
+
     // we can create special type of methods to access these fields outside the class.
     // 1. Getter Methods:
     // Observer methods / Accessor methods
