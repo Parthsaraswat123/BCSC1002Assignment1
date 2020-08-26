@@ -19,6 +19,19 @@ public class Book {
     private String authorName;
     private String bookISBNNumber;
 
+    public Book() {
+        this.bookName = "JAVA A Beginner's Guide";
+        this.authorName = "Herbert Schildt";
+        this.bookISBNNumber = "978-1-26-044022-5";
+
+    }
+
+    public Book(String bookName, String authorName, String bookISBNNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.bookISBNNumber = bookISBNNumber;
+    }
+
     // we can create special type of methods to access these fields outside the class.
     // 1. Getter Methods:
     // Observer methods / Accessor methods
