@@ -21,4 +21,26 @@ public class Library {
 
     private boolean[] Books;
 
+    // we can create special type of methods to access these fields outside the class.
+    // 1. Getter Methods:
+    // Observer methods / Accessor methods
+    //we can use the getter methods to access the value of a filed i.e read it.
+
+    // 2. Setter Methods:
+    // Transformer methods / Mutator methods
+    // we can use setter methods to set the value of the field i.e write it.
+
+    /*
+     * public <am:sameAsTheField> void set <NameOfTheField>(<SameAsTheField>) {}
+     *
+     */
+
+    public boolean[] getBooks() {
+        return Books;
+    }
+
+    public void setBooks(boolean[] books) {
+        Books = books;
+    }
+
 }
