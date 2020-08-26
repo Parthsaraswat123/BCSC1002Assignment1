@@ -6,6 +6,9 @@
  * */
 package definitions;
 
+import javax.print.DocFlavor;
+import java.lang.reflect.Array;
+
 public class Student {
 
     // Components of a Definition Class in Java
@@ -28,7 +31,22 @@ public class Student {
     private String studentName;
     private long studentUniversityRollNumber;
     private int studentIssuedBooksNumber;
-    private String[] studentIssuedBooksNames;
+    private String[] studentIssuedBook;
+
+    public Student() {
+        this.studentName = "Parth Saraswat";
+        this.studentUniversityRollNumber = 191500529;
+        this.studentIssuedBooksNumber = 1;
+        this.studentIssuedBook = new String[]{"JAVA" + "A" + "Beginner's" + "Guide"};
+
+    }
+
+    public Student(String studentName, long studentUniversityRollNumber, int studentIssuedBooksNumber, String[] studentIssuedBook) {
+        this.studentName = studentName;
+        this.studentUniversityRollNumber = studentUniversityRollNumber;
+        this.studentIssuedBooksNumber = studentIssuedBooksNumber;
+        this.studentIssuedBook = studentIssuedBook;
+    }
 
     // we can create special type of methods to access these fields outside the class.
     // 1. Getter Methods:
@@ -69,11 +87,11 @@ public class Student {
     }
 
     public String[] getStudentIssuedBooksNames() {
-        return studentIssuedBooksNames;
+        return studentIssuedBook;
     }
     //
     public void setStudentIssuedBooksNames(String[] studentIssuedBooksNames) {
-        this.studentIssuedBooksNames = studentIssuedBooksNames;
+        this.studentIssuedBook = studentIssuedBooksNames;
     }
 
 }

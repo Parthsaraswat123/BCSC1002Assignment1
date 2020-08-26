@@ -35,7 +35,7 @@ public class Library {
      *
      */
 
-    public boolean[] getBooks() {
+    public boolean[] isBooks() {
         return Books;
     }
 
