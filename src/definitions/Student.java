@@ -9,6 +9,7 @@ package definitions;
 import javax.print.DocFlavor;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Student {
 
@@ -77,5 +78,23 @@ public class Student {
                 ", studentIssuedBooksNumber=" + studentIssuedBooksNumber +
                 ", studentIssuedBook=" + Arrays.toString(studentIssuedBook) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return getStudentUniversityRollNumber() == student.getStudentUniversityRollNumber() &&
+                getStudentIssuedBooksNumber() == student.getStudentIssuedBooksNumber() &&
+                Objects.equals(getStudentName(), student.getStudentName()) &&
+                Arrays.equals(studentIssuedBook, student.studentIssuedBook);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getStudentName(), getStudentUniversityRollNumber(), getStudentIssuedBooksNumber());
+        result = 31 * result + Arrays.hashCode(studentIssuedBook);
+        return result;
     }
 }
