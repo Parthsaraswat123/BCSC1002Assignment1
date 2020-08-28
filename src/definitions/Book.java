@@ -56,5 +56,16 @@ public class Book {
         this.bookISBNNumber = bookISBNNumber;
     }
 
+    // 4. toString() method:
+    // used the display the attributes of an objects, or to print an object values.
 
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", bookISBNNumber='" + bookISBNNumber + '\'' +
+                '}';
+    }
 }

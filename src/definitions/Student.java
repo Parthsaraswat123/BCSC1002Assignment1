@@ -8,6 +8,7 @@ package definitions;
 
 import javax.print.DocFlavor;
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Student {
 
@@ -63,4 +64,18 @@ public class Student {
         this.studentIssuedBook = studentIssuedBooksNames;
     }
 
+
+    // 4. toString() method:
+    // used the display the attributes of an objects, or to print an object values.
+
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentName='" + studentName + '\'' +
+                ", studentUniversityRollNumber=" + studentUniversityRollNumber +
+                ", studentIssuedBooksNumber=" + studentIssuedBooksNumber +
+                ", studentIssuedBook=" + Arrays.toString(studentIssuedBook) +
+                '}';
+    }
 }

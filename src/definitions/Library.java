@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
 
     private boolean[] Books;
@@ -26,4 +28,14 @@ public class Library {
         Books = books;
     }
 
+    // 4. toString() method:
+    // used the display the attributes of an objects, or to print an object values.
+
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "Books=" + Arrays.toString(Books) +
+                '}';
+    }
 }
