@@ -22,7 +22,7 @@ public class Student {
         this.studentName = "Parth Saraswat";
         this.studentUniversityRollNumber = 191500529;
         this.studentIssuedBooksNumber = 1;
-        this.studentIssuedBook = new String[]{"JAVA" + "A" + "Beginner's" + "Guide"};
+        this.studentIssuedBook = new String[]{"JAVAABeginner'sGuide"};
 
     }
 
@@ -93,8 +93,7 @@ public class Student {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(getStudentName(), getStudentUniversityRollNumber(), getStudentIssuedBooksNumber());
-        result = 31 * result + Arrays.hashCode(studentIssuedBook);
-        return result;
+        return Objects.hash(getStudentName(), getStudentUniversityRollNumber(), getStudentIssuedBooksNumber());
     }
 }
+
